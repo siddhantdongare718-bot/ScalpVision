@@ -25,7 +25,12 @@ def make_final_mask(seg_path, sam_path, result_path):
         cv2.imwrite(os.path.join(result_path, img_name), result)
 
 if __name__ == '__main__':
-    seg_path = '../scalp_aihub/seg_result/seg_test'
-    sam_path = '../scalp_aihub/sam_result/sam_test'
-    result_path = '../scalp_aihub/ensemble_result/ensemble_test'
+    # Paths relative to the 'segmentation' folder
+    seg_path = '/content/ScalpVision/u2net_results'
+    sam_path = '/content/ScalpVision/sam_results'
+    result_path = '/content/ScalpVision/final_masks'
+    
+    # Create the output directory if it doesn't exist
+    os.makedirs(result_path, exist_ok=True)
+    
     make_final_mask(seg_path, sam_path, result_path)
