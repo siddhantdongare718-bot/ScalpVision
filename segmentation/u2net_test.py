@@ -58,10 +58,10 @@ def main():
 
 
 
-    # image_dir = '../../../scalp_aihub/sample/'
-    image_dir = '../../scalp_img/'
-    prediction_dir = '../../../scalp_aihub/sample_result/'
-    model_dir = 'saved_models/new_seg_ckpt/tar_min.pth'
+   # Paths relative to the 'segmentation' folder
+    image_dir = '/content/ScalpVision/input_images/'
+    prediction_dir = '/content/ScalpVision/u2net_results/'
+    model_dir = '/content/ScalpVision/u2net.pth'
 
     img_name_list = glob.glob(os.path.join(image_dir, '*'))
 
