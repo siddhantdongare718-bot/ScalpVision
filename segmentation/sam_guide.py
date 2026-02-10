@@ -215,8 +215,8 @@ def cluster(img_path,im):
     
     return pts_group, bbox_group
 
-mask_dir="datasets/seg_train"
-save_json_dir="datasets/"
+mask_dir="/content/ScalpVision/u2net_results"
+save_json_dir="/content/ScalpVision/"
 
 
 file_dict={}
